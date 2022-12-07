@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<a href="{% url 'shop-list'%}">Go Back</a>
+
+<h2>Details about {{ shop.name }}</h2>
+<h2>Chef: {{ shop.chef.username }}</h2>
+<p>{{ shop.desc }}</p>
+<a href="{% url 'shop-update' shop.pk %}">+ Update Cake</a>
+<a href="{% url 'shop-delete' shop.pk %}">+ Delete Cake</a>
+
+{% endblock content %}
